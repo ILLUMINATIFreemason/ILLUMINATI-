@@ -351,110 +351,344 @@ text-align:center;
 text-align:center;
 
 }
+<style>
 
-
-/* تنظیم آیکن ها در مرکز */
-
-.icon{
-
-margin-left:auto;
-margin-right:auto;
-
+*{
+box-sizing:border-box;
+font-family:Tahoma, Arial, sans-serif;
 }
 
 
-/* متن‌ها در حالت راست به چپ */
-
+html,
 body{
+
+width:100%;
+max-width:100%;
+
+margin:0;
+
+padding:0;
+
+overflow-x:hidden;
 
 direction:rtl;
 
 }
 
 
-/* کارت‌های کانال */
-/* FIX CENTER ALL CONTENT */
+/* صفحه اصلی */
 
-.card,
-.channel-card,
-.feature,
-.profile-box,
-.score-box,
-.active-box{
+body{
 
-text-align:center !important;
+background:#050505;
+
+color:white;
+
+min-height:100vh;
+
+padding-bottom:90px;
 
 }
 
 
-.card .icon,
-.channel-card .icon{
 
-display:flex !important;
+/* کنترل صفحات */
 
-margin:0 auto !important;
+.page{
+
+display:none;
+
+width:100%;
+
+max-width:500px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+
+.page.active{
+
+display:block;
+
+}
+
+
+
+
+
+/* برند */
+
+.brand{
+
+text-align:center;
+
+padding:40px 10px;
+
+}
+
+
+.brand h1{
+
+font-size:48px;
+
+margin:0;
+
+font-weight:bold;
+
+text-shadow:0 0 20px #555;
+
+}
+
+
+.brand h3{
+
+font-size:16px;
+
+letter-spacing:5px;
+
+color:#aaa;
+
+margin-top:8px;
+
+}
+
+
+.brand p{
+
+font-size:18px;
+
+color:#ddd;
+
+}
+
+
+
+
+
+/* کارت عمومی */
+
+.card{
+
+width:100%;
+
+background:#111;
+
+border:1px solid #292929;
+
+border-radius:25px;
+
+padding:20px;
+
+margin:15px 0;
+
+text-align:center;
+
+overflow:hidden;
+
+}
+
+
+
+
+
+/* آیکن ها */
+
+.icon{
+
+width:70px;
+
+height:70px;
+
+background:#222;
+
+border-radius:50%;
+
+display:flex;
 
 align-items:center;
 
 justify-content:center;
 
-}
+font-size:35px;
 
-
-.card a,
-.channel-card a{
-
-margin-left:auto !important;
-
-margin-right:auto !important;
+margin:0 auto 15px auto;
 
 }
 
 
-#channels{
+
+
+
+/* لینک ورود */
+
+a{
+
+display:block;
+
+width:max-content;
+
+margin:15px auto 0 auto;
+
+padding:12px 25px;
+
+background:white;
+
+color:black;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+
+
+
+/* دکمه ها */
+
+button{
+
+border:none;
+
+cursor:pointer;
+
+font-family:inherit;
+
+}
+
+
+
+
+
+/* ورودی پروفایل */
+
+input{
+
+display:block;
+
+width:100%;
+
+max-width:350px;
+
+margin:10px auto;
+
+padding:13px;
+
+border-radius:25px;
+
+border:none;
+
+outline:none;
+
+font-size:16px;
 
 text-align:center;
 
 }
 
 
-#channels .card{
 
-align-items:center !important;
 
-justify-content:center !important;
+
+/* امتیاز */
+
+#points{
+
+font-size:55px;
+
+color:#ffd700;
+
+}
+
+
+
+
+
+/* عضو فعال */
+
+#active .card{
+
+font-size:18px;
 
 }
 
 
-h1,h2,h3,p{
 
-text-align:center;
+
+
+/* منوی پایین */
+
+.bottom{
+
+position:fixed;
+
+bottom:0;
+
+right:0;
+
+left:0;
+
+height:75px;
+
+background:#0b0b0b;
+
+border-top:1px solid #333;
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:center;
+
+z-index:999;
 
 }
-html, body{
 
-width:100%;
+
+
+
+.bottom button{
+
+background:none;
+
+color:white;
+
+font-size:23px;
+
+width:20%;
+
+}
+
+
+
+.bottom button:hover{
+
+color:#ffd700;
+
+}
+
+
+
+
+/* جلوگیری از زوم و بیرون رفتن */
+
+img,
+svg,
+video{
+
 max-width:100%;
-overflow-x:hidden;
+
+height:auto;
 
 }
 
 
-*{
-
-max-width:100%;
-
-}
-
-
-.app{
-
-width:100%;
-max-width:500px;
-margin:auto;
-
- }
 
 </style>
 
