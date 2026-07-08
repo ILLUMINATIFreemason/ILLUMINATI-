@@ -969,57 +969,106 @@ Sar Zamine Qessa Ha
 
 <script>
 
-
 function show(id){
 
-document.querySelectorAll('.page')
-.forEach(x=>x.classList.remove('active'));
+document.querySelectorAll('.page').forEach(function(page){
 
-document.getElementById(id)
-.classList.add('active');
+page.classList.remove('active');
+
+});
+
+
+let selected = document.getElementById(id);
+
+
+if(selected){
+
+selected.classList.add('active');
+
+}
 
 }
 
 
 
 
-let points=localStorage.getItem("points")||0;
 
-document.getElementById("points").innerHTML=points;
+let points = localStorage.getItem("points") || 0;
+
+
+let pointBox = document.getElementById("points");
+
+
+if(pointBox){
+
+pointBox.innerHTML = points;
+
+}
+
+
 
 
 
 function addPoint(){
 
-points++;
+points = Number(points) + 1;
 
-localStorage.setItem("points",points);
 
-document.getElementById("points").innerHTML=points;
+localStorage.setItem("points", points);
+
+
+
+let box = document.getElementById("points");
+
+
+if(box){
+
+box.innerHTML = points;
 
 }
+
+
+}
+
 
 
 
 
 function saveUser(){
 
-let n=document.getElementById("name").value;
 
-let p=document.getElementById("phone").value;
+let name = document.getElementById("name").value;
 
-
-localStorage.setItem("user",n+" - "+p);
+let phone = document.getElementById("phone").value;
 
 
-document.getElementById("result").innerHTML=
-"ثبت شد: "+n;
+
+if(name === "" || phone === ""){
+
+alert("لطفاً نام و شماره موبایل را وارد کنید");
+
+return;
 
 }
 
 
 
-</script>
+localStorage.setItem(
+"user",
+name + " - " + phone
+);
+
+
+
+document.getElementById("result").innerHTML =
+"ثبت شد: " + name;
+
+
+}
+
+
+
+ </script>
 
 
 </body>
