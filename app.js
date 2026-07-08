@@ -395,3 +395,138 @@ loadScore();
 loadUser();
 
 }
+/*=========================================
+ ILLUMINATI v2.0
+ app.js - Part 4 Final
+=========================================*/
+
+
+// ---------- کپی لینک دعوت ----------
+
+function copyInvite(){
+
+const inviteText =
+document.getElementById("inviteText");
+
+
+if(!inviteText){
+
+return;
+
+}
+
+
+const link =
+inviteText.innerText;
+
+
+
+navigator.clipboard.writeText(link)
+
+.then(function(){
+
+alert("🔗 لینک دعوت کپی شد.");
+
+})
+
+.catch(function(){
+
+alert("کپی لینک انجام نشد.");
+
+});
+
+
+}
+
+
+
+
+// ---------- ساخت لینک دعوت کاربر ----------
+
+function createInviteLink(){
+
+const data =
+localStorage.getItem("illuminatiUser");
+
+
+if(!data){
+
+return;
+
+}
+
+
+const user =
+JSON.parse(data);
+
+
+
+const inviteLink =
+window.location.origin +
+"?invite=" +
+encodeURIComponent(user.name);
+
+
+
+const box =
+document.getElementById("inviteText");
+
+
+if(box){
+
+box.innerText =
+inviteLink;
+
+}
+
+}
+
+
+
+
+// ---------- بررسی دعوت ----------
+
+function checkInvite(){
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+
+const inviter =
+params.get("invite");
+
+
+
+if(inviter){
+
+console.log(
+"دعوت شده توسط:",
+inviter
+);
+
+}
+
+}
+
+
+
+
+// ---------- اجرای نهایی ----------
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+
+loadUser();
+
+loadScore();
+
+createInviteLink();
+
+checkInvite();
+
+
+});
