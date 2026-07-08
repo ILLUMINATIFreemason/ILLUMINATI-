@@ -9,104 +9,90 @@
 <title>ایلو‌میناتی | ILLUMINATI</title>
 
 <style>
-body{
-margin:0;
-background:
-radial-gradient(circle at top,#222,#050505 60%);
-color:white;
-font-family:tahoma;
-padding-bottom:90px;
+/* ===== ILLUMINATI FINAL FIX ===== */
+
+
+.page{
+display:none;
 }
 
 
-.brand{
-
-text-align:center;
-padding:45px 20px;
-
-}
-
-
-.brand h1{
-
-font-size:55px;
-margin:0;
-
-font-weight:bold;
-
-text-shadow:
-0 0 15px #fff;
-
-}
-
-
-.brand h3{
-
-font-size:18px;
-letter-spacing:6px;
-color:#aaa;
-
-margin-top:5px;
-
-}
-
-
-.brand p{
-
-font-size:18px;
-color:#ddd;
-
+.page.active{
+display:block;
 }
 
 
 
+/* جلوگیری از خراب شدن کارت‌ها */
 
 .card{
+width:100%;
+overflow:hidden;
+}
 
-background:rgba(255,255,255,0.06);
 
-border:1px solid rgba(255,255,255,0.15);
+/* تنظیم صفحه خانه */
 
-border-radius:25px;
+#home{
+text-align:center;
+}
 
-padding:22px;
 
-margin:18px 0;
 
-backdrop-filter:blur(10px);
+/* کارت کانال‌ها */
 
-box-shadow:
+#channels .card{
 
-0 0 20px rgba(255,255,255,0.05);
+display:block;
+text-align:center;
+
+}
+
+
+#channels .icon{
+
+margin:0 auto 15px auto;
 
 }
 
 
 
-.card:hover{
+/* منوی پایین */
 
-transform:scale(1.02);
+.bottom{
 
-transition:.3s;
+z-index:999;
 
 }
 
 
 
+/* پروفایل */
 
-.icon{
+#profile input{
 
-width:70px;
+display:block;
+margin:10px auto;
 
-height:70px;
+}
 
-border-radius:50%;
 
-display:flex;
+/* ظاهر امتیاز */
 
-align-items:center;
+#score .card{
 
-justify-content:center;
+text-align:center;
+
+}
+
+
+/* عضو فعال */
+
+#active .card{
+
+text-align:center;
+
+}
 
 font-size:35px;
 <style>
