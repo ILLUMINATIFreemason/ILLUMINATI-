@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ایلو‌میناتی | ILLUMINATI</title>
+
+<style>
+
+body{
+margin:0;
+background:#050505;
+color:white;
+font-family:tahoma;
+padding-bottom:80px;
+}
+
+.page{
+display:none;
+padding:20px;
+}
+
+.active{
+display:block;
+}
+
+.brand{
+text-align:center;
+padding:30px;
+}
+
+.brand h1{
+font-size:45px;
+margin:0;
+}
+
+.brand h3{
+color:#aaa;
+letter-spacing:4px;
+}
+
+
+.card{
+background:#111;
+border:1px solid #333;
+border-radius:20px;
+padding:20px;
+margin:15px 0;
+}
+
+
+.icon{
+font-size:40px;
+}
+
+
+a,button{
+
+display:inline-block;
+background:white;
+color:black;
+padding:10px 20px;
+border-radius:25px;
+text-decoration:none;
+border:none;
+margin-top:10px;
+
+}
+
+
+.bottom{
+
+position:fixed;
+bottom:0;
+right:0;
+left:0;
+height:70px;
+background:#111;
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+}
+
+
+.bottom button{
+
+background:none;
+color:white;
+padding:5px;
+
+}
+
+
+input{
+
+width:90%;
+padding:12px;
+margin:8px;
+border-radius:20px;
+border:none;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<!-- خانه -->
+
+<section id="home" class="page active">
+
+
+<div class="brand">
+
+<h1>
+ایلو‌میناتی
+</h1>
+
+<h3>
+ILLUMINATI
+</h3>
+
+
+<p>
+✨ چهار جهان، یک مسیر ✨
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+🕋 ایمان | 🌍 دانش | ❤️ احساس | 📖 داستان
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- کانال ها -->
+
+<section id="channels" class="page">
+
+<h2>📢 کانال‌های ما</h2>
+
+
+
+<div class="card">
+
+<div class="icon">🕋</div>
+
+<h3>﷽ ندای ایمان</h3>
+
+<p>
+پاسخ‌دهی به تمام سوالات اسلامی
+</p>
+
+<a href="https://whatsapp.com/channel/0029Vb7Q858Chq6DfFnIEG2B">
+ورود
+</a>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">🌍</div>
+
+<h3>
+Gₑₙₑᵣₐₗ ₍Iₙfₒᵣₘₐₜᵢₒₙ
+</h3>
+
+<p>
+پاسخ‌دهی به سوالات عمومی
+</p>
+
+<a href="https://whatsapp.com/channel/0029Vb7YHqND8SDu7Ds9Ym0K">
+ورود
+</a>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">❤️‍🩹</div>
+
+<h3>
+هیچی Haechy
+</h3>
+
+<p>
+متن‌های دلتنگی و احساسی
+</p>
+
+<a href="https://whatsapp.com/channel/0029Vb83ghH3QxRzgDtZon20">
+ورود
+</a>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">📖</div>
+
+<h3>
+Sar Zamine Qessa Ha
+</h3>
+
+<p>
+داستان‌های عاشقانه و تخیلی
+</p>
+
+<a href="https://whatsapp.com/channel/0029Vb7NT0HBKfi8U61rIj17">
+ورود
+</a>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- امتیاز -->
+
+<section id="score" class="page">
+
+<h2>🏆 امتیاز</h2>
+
+<div class="card">
+
+<p>
+امتیاز شما:
+</p>
+
+<h1 id="points">
+0
+</h1>
+
+
+<button onclick="addPoint()">
+دریافت امتیاز
+</button>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- عضو فعال -->
+
+<section id="active" class="page">
+
+<h2>⭐ عضو فعال</h2>
+
+
+<div class="card">
+
+🥇 عضو طلایی
+
+</div>
+
+
+<div class="card">
+
+🥈 عضو نقره‌ای
+
+</div>
+
+
+<div class="card">
+
+🥉 عضو برنزی
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- پروفایل -->
+
+<section id="profile" class="page">
+
+
+<h2>👤 پروفایل</h2>
+
+
+<div class="card">
+
+<input id="name" placeholder="نام شما">
+
+<input id="phone" placeholder="شماره موبایل">
+
+
+<button onclick="saveUser()">
+ثبت نام
+</button>
+
+
+<p id="result"></p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- منو -->
+
+<nav class="bottom">
+
+
+<button onclick="show('home')">
+🏠
+</button>
+
+
+<button onclick="show('channels')">
+📢
+</button>
+
+
+<button onclick="show('score')">
+🏆
+</button>
+
+
+<button onclick="show('active')">
+⭐
+</button>
+
+
+<button onclick="show('profile')">
+👤
+</button>
+
+
+</nav>
+
+
+
+
+
+<script>
+
+
+function show(id){
+
+document.querySelectorAll('.page')
+.forEach(x=>x.classList.remove('active'));
+
+document.getElementById(id)
+.classList.add('active');
+
+}
+
+
+
+
+let points=localStorage.getItem("points")||0;
+
+document.getElementById("points").innerHTML=points;
+
+
+
+function addPoint(){
+
+points++;
+
+localStorage.setItem("points",points);
+
+document.getElementById("points").innerHTML=points;
+
+}
+
+
+
+
+function saveUser(){
+
+let n=document.getElementById("name").value;
+
+let p=document.getElementById("phone").value;
+
+
+localStorage.setItem("user",n+" - "+p);
+
+
+document.getElementById("result").innerHTML=
+"ثبت شد: "+n;
+
+}
+
+
+
+</script>
+
+
+</body>
+
+  </html>
