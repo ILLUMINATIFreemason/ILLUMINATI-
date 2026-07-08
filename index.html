@@ -4,538 +4,516 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ایلو‌میناتی | ILLUMINATI</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<style>
+<title>
+ایلو‌میناتی | ILLUMINATI
+</title>
 
-*{
-box-sizing:border-box;
-}
+<link rel="stylesheet"
+href="style.css">
 
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-body{
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-margin:0;
-background:
-radial-gradient(circle at top,#3a2b12,#050505 45%);
-
-color:#fff;
-
-font-family:tahoma,Arial,sans-serif;
-
-padding-bottom:90px;
-
-}
-
-
-
-.page{
-
-display:none;
-
-padding:20px;
-
-animation:fade .4s ease;
-
-}
-
-
-
-.page.active{
-
-display:block;
-
-}
-
-
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-transform:translateY(15px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
-
-/* برند */
-
-.brand{
-
-text-align:center;
-
-padding:45px 20px;
-
-}
-
-
-
-.brand h1{
-
-font-size:55px;
-
-margin:0;
-
-background:linear-gradient(
-45deg,
-#d4af37,
-#fff,
-#c0c0c0
-);
-
--webkit-background-clip:text;
-
-color:transparent;
-
-text-shadow:0 0 25px #d4af37;
-
-}
-
-
-
-.brand h3{
-
-font-size:18px;
-
-letter-spacing:8px;
-
-color:#c0c0c0;
-
-margin-top:10px;
-
-}
-
-
-
-.brand p{
-
-color:#e8d5a3;
-
-font-size:18px;
-
-}
-
-
-
-
-
-/* کارت ها */
-
-
-.card{
-
-background:
-
-linear-gradient(
-145deg,
-rgba(255,255,255,.12),
-rgba(255,255,255,.03)
-);
-
-
-border:1px solid rgba(212,175,55,.5);
-
-
-border-radius:25px;
-
-
-padding:25px;
-
-
-margin:18px 0;
-
-
-box-shadow:
-
-0 15px 35px rgba(0,0,0,.6),
-
-inset 0 0 20px rgba(255,255,255,.05);
-
-
-backdrop-filter:blur(10px);
-
-}
-
-
-
-.icon{
-
-font-size:55px;
-
-margin-bottom:15px;
-
-}
-
-
-
-
-
-/* دکمه ها */
-
-
-a,button{
-
-
-border:none;
-
-
-background:
-
-linear-gradient(
-135deg,
-#d4af37,
-#fff,
-#c0c0c0
-);
-
-
-color:#111;
-
-
-font-weight:bold;
-
-
-padding:12px 25px;
-
-
-border-radius:30px;
-
-
-text-decoration:none;
-
-
-cursor:pointer;
-
-
-}
-
-
-
-button:active,
-a:active{
-
-transform:scale(.95);
-
-}
-
-
-
-
-
-/* ورودی پروفایل */
-
-
-input{
-
-width:90%;
-
-
-padding:15px;
-
-
-margin:8px;
-
-
-border-radius:25px;
-
-
-border:1px solid #d4af37;
-
-
-background:#111;
-
-
-color:white;
-
-
-font-size:16px;
-
-}
-
-
-
-
-
-/* منوی پایین */
-
-
-.bottom{
-
-
-position:fixed;
-
-
-bottom:0;
-
-
-left:0;
-
-
-right:0;
-
-
-height:75px;
-
-
-background:
-
-linear-gradient(
-180deg,
-#151515,
-#050505
-);
-
-
-border-top:1px solid #d4af37;
-
-
-display:flex;
-
-
-justify-content:space-around;
-
-
-align-items:center;
-
-
-z-index:100;
-
-
-}
-
-
-
-.bottom button{
-
-
-background:none;
-
-
-color:white;
-
-
-font-size:25px;
-
-
-padding:5px;
-
-
-}
-
-
-.bottom button:hover{
-
-color:#d4af37;
-
-}
-
-
-
-
-h2{
-
-color:#d4af37;
-
-text-align:center;
-
-}
-
-
-
-/* قلب مرهم شده */
-
-.heart{
-
-color:#e8d5a3;
-
-font-size:60px;
-
-filter:drop-shadow(0 0 15px #d4af37);
-
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap"
+rel="stylesheet">
 
 </head>
-
 
 <body>
 
 
 
-<!-- خانه -->
+<!-- ===== صفحه خانه ===== -->
 
-<section id="home" class="page active">
+<section
+id="home"
+class="page active">
 
 
-<div class="brand">
-<div class="heart-logo">
+<header class="hero">
+
+
+<div class="hero-glow"></div>
+
+
+<div class="logo">
+
+<div class="logo-circle">
 
 ❤️‍🩹
 
 </div>
+
+</div>
+
+
+
 <h1>
+
 ایلو‌میناتی
+
 </h1>
 
+
 <h3>
+
 ILLUMINATI
+
 </h3>
 
 
-<p>
-✨ چهار جهان متفاوت، در یک مسیر ✨
+<p class="slogan">
+
+چهار جهان،
+یک مسیر،
+یک خانواده
+
 </p>
 
 
-</div>
+<p class="description">
 
+به مجموعه رسمی ایلو‌میناتی
+خوش آمدید.
 
-<div class="card">
+در اینجا می‌توانید
+به چهار کانال برتر ما
+در زمینه‌های اسلامی،
+اطلاعات عمومی،
+احساسات
+و داستان‌های عاشقانه
+دسترسی داشته باشید.
 
-🕋 ایمان | 🌍 علم | ❤️ احساس | 📖 داستان
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- کانال ها -->
-
-<section id="channels" class="page">
-
-<h2>📢 ایلومیناتی یعنی من </h2>
-
-
-
-<div class="card">
-
-<div class="icon">🕋</div>
-
-<h3>﷽ ندای ایمان</h3>
-
-<p>
-پاسخ‌ دهی معتبر به تمام سوالات اسلامی
 </p>
 
-<a href="https://whatsapp.com/channel/0029Vb7Q858Chq6DfFnIEG2B">
-ورود
-</a>
+
+
+<div class="hero-buttons">
+
+<button
+onclick="showPage('channels')">
+
+ورود به کانال‌ها
+
+</button>
+
+
+<button
+onclick="showPage('profile')">
+
+ثبت نام
+
+</button>
 
 </div>
 
 
+</header>
 
 
-<div class="card">
 
-<div class="icon">🌍</div>
 
-<h3>
-Gₑₙₑᵣₐₗ ₍Iₙfₒᵣₘₐₜᵢₒₙ
-</h3>
+<section class="home-cards">
+
+
+<div class="glass-card">
+
+<div class="card-icon">
+
+🕋
+
+</div>
+
+<h2>
+
+ندای ایمان
+
+</h2>
 
 <p>
-پاسخ‌ دهی معتبر به سوالات عمومی
-</p>
 
-<a href="https://whatsapp.com/channel/0029Vb7YHqND8SDu7Ds9Ym0K">
-ورود
-</a>
+پاسخ‌دهی به
+تمام سوالات اسلامی
+
+</p>
 
 </div>
 
 
 
 
-<div class="card">
+<div class="glass-card">
 
-<div class="icon">❤️‍🩹</div>
+<div class="card-icon">
 
-<h3>
+🌍
+
+</div>
+
+<h2>
+
+معلومات عمومی
+
+</h2>
+
+<p>
+
+پاسخ‌دهی به
+تمام سوالات عمومی
+
+</p>
+
+</div>
+
+
+
+
+<div class="glass-card">
+
+<div class="card-icon">
+
+❤️‍🩹
+
+</div>
+
+<h2>
+
 هیچی Haechy
-</h3>
+
+</h2>
 
 <p>
-دست نوشته های از دلتنگی و احساس
-</p>
 
-<a href="https://whatsapp.com/channel/0029Vb83ghH3QxRzgDtZon20">
-ورود
-</a>
+نشر متن‌های
+احساسی و دلتنگی
+
+</p>
 
 </div>
 
 
 
 
-<div class="card">
+<div class="glass-card">
 
-<div class="icon">📖</div>
+<div class="card-icon">
 
-<h3>
-Sar Zamine Qessa Ha
-</h3>
-
-<p>
-داستان‌ های عاشقانه و حقیقی
-</p>
-
-<a href="https://whatsapp.com/channel/0029Vb7NT0HBKfi8U61rIj17">
-ورود
-</a>
+📖
 
 </div>
 
+<h2>
+
+سرزمین قصه‌ها
+
+</h2>
+
+<p>
+
+داستان‌های
+عاشقانه و تخیلی
+
+</p>
+
+</div>
 
 
 </section>
 
 
+</section><!-- ===== صفحه کانال‌ها ===== -->
+
+<section
+id="channels"
+class="page">
+
+
+<h1 class="page-title">
+
+کانال‌های برتر
+
+</h1>
+
+
+<p class="page-subtitle">
+
+یکی را انتخاب کنید و وارد شوید
+
+</p>
 
 
 
 
-<!-- امتیاز -->
+<div class="channel-card gold">
+
+
+<div class="channel-top">
+
+<div class="channel-icon">
+
+🕋
+
+</div>
+
+<div>
+
+<h2>
+
+﷽ ندای ایمان
+
+</h2>
+
+<span>
+
+اسلامی
+
+</span>
+
+</div>
+
+</div>
+
+
+<p>
+
+پاسخ‌دهی به تمام سوالات اسلامی
+
+</p>
+
+
+<a
+class="join-btn"
+href="https://whatsapp.com/channel/0029Vb7Q858Chq6DfFnIEG2B"
+target="_blank">
+
+ورود به کانال
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="channel-card silver">
+
+
+<div class="channel-top">
+
+<div class="channel-icon">
+
+🌍
+
+</div>
+
+<div>
+
+<h2>
+
+Gₑₙₑᵣₐₗ ₍Iₙfₒᵣₘₐₜᵢₒₙ
+
+</h2>
+
+<span>
+
+عمومی
+
+</span>
+
+</div>
+
+</div>
+
+
+<p>
+
+پاسخ‌دهی به تمام سوالات عمومی
+
+</p>
+
+
+<a
+class="join-btn"
+href="https://whatsapp.com/channel/0029Vb7YHqND8SDu7Ds9Ym0K"
+target="_blank">
+
+ورود به کانال
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="channel-card bronze">
+
+
+<div class="channel-top">
+
+<div class="channel-icon">
+
+❤️‍🩹
+
+</div>
+
+<div>
+
+<h2>
+
+هیچی Haechy
+
+</h2>
+
+<span>
+
+احساسی
+
+</span>
+
+</div>
+
+</div>
+
+
+<p>
+
+نشر متن‌های دلتنگی و احساسی
+
+</p>
+
+
+<a
+class="join-btn"
+href="https://whatsapp.com/channel/0029Vb83ghH3QxRzgDtZon20"
+target="_blank">
+
+ورود به کانال
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="channel-card story">
+
+
+<div class="channel-top">
+
+<div class="channel-icon">
+
+📖
+
+</div>
+
+<div>
+
+<h2>
+
+Sar Zamine Qessa Ha
+
+</h2>
+
+<span>
+
+داستان
+
+</span>
+
+</div>
+
+</div>
+
+
+<p>
+
+نشر داستان‌های عاشقانه و تخیلی
+
+</p>
+
+
+<a
+class="join-btn"
+href="https://whatsapp.com/channel/0029Vb7NT0HBKfi8U61rIj17"
+target="_blank">
+
+ورود به کانال
+
+</a>
+
+
+</div>
+
+
+
+</section><!-- ===== صفحه امتیاز ===== -->
 
 <section id="score" class="page">
 
-<h2>🏆 امتیاز</h2>
+<h1 class="page-title">
+🏆 امتیازات
+</h1>
 
-<div class="card">
+<div class="score-card">
 
-<p>
-امتیاز شما:
-</p>
+<h2>امتیاز شما</h2>
 
-<h1 id="points">
+<h1 id="userScore">
 0
 </h1>
 
+<p>
+با فعالیت، دعوت دوستان و شرکت در برنامه‌ها امتیاز کسب کنید.
+</p>
 
-<button onclick="addPoint()">
-دریافت امتیاز
+<button onclick="dailyReward()">
+🎁 دریافت امتیاز روزانه
 </button>
 
 </div>
 
+
+<div class="glass-card">
+
+<h2>
+رتبه‌های افتخاری
+</h2>
+
+<div class="rank-item">
+🥇 عضو طلایی
+</div>
+
+<div class="rank-item">
+🥈 عضو نقره‌ای
+</div>
+
+<div class="rank-item">
+🥉 عضو برنزی
+</div>
+
+</div>
 
 </section>
 
@@ -543,34 +521,45 @@ Sar Zamine Qessa Ha
 
 
 
-
-<!-- عضو فعال -->
+<!-- ===== صفحه عضو فعال ===== -->
 
 <section id="active" class="page">
 
-<h2>⭐ عضو فعال</h2>
+<h1 class="page-title">
+⭐ عضو فعال
+</h1>
 
+<div class="glass-card">
 
-<div class="card">
+<h2>
+شرایط انتخاب عضو فعال
+</h2>
 
-🥇 عضو طلایی
+<ul class="rules">
+
+<li>دعوت کاربران جدید</li>
+
+<li>فعالیت مستمر در کانال‌ها</li>
+
+<li>اشتراک‌گذاری لینک ایلو‌میناتی</li>
+
+<li>حضور در مسابقات و برنامه‌ها</li>
+
+</ul>
 
 </div>
 
+<div class="glass-card">
 
-<div class="card">
+<h2>
+🏅 عضو فعال هفته
+</h2>
 
-🥈 عضو نقره‌ ای
-
-</div>
-
-
-<div class="card">
-
-🥉 عضو برنزی
+<p>
+به‌زودی نمایش داده خواهد شد.
+</p>
 
 </div>
-
 
 </section>
 
@@ -578,130 +567,131 @@ Sar Zamine Qessa Ha
 
 
 
-
-<!-- پروفایل -->
+<!-- ===== صفحه پروفایل ===== -->
 
 <section id="profile" class="page">
 
+<h1 class="page-title">
+👤 پروفایل
+</h1>
 
-<h2>👤 پروفایل</h2>
+<div class="profile-card">
 
+<div class="profile-avatar">
 
-<div class="card">
-
-<input id="name" placeholder="نام شما">
-
-<input id="phone" placeholder="شماره موبایل">
-
-
-<button onclick="saveUser()">
-ثبت نام
-</button>
-
-
-<p id="result"></p>
-
+❤️‍🩹
 
 </div>
 
+<input
+type="text"
+id="userName"
+placeholder="نام شما">
+
+<input
+type="tel"
+id="userPhone"
+placeholder="شماره موبایل">
+
+<button onclick="registerUser()">
+
+ثبت‌نام
+
+</button>
+
+<div id="profileInfo">
+
+<p>
+هنوز ثبت‌نام انجام نشده است.
+</p>
+
+</div>
+
+</div>
 
 </section>
+<!-- ===== منوی پایین ===== -->
 
+<nav class="bottom-menu">
 
+<button class="menu-btn active"
+onclick="showPage('home')">
 
-
-
-
-<!-- منو -->
-
-<nav class="bottom">
-
-
-<button onclick="show('home')">
 🏠
+
+<span>
+
+خانه
+
+</span>
+
 </button>
 
 
-<button onclick="show('channels')">
+
+<button class="menu-btn"
+onclick="showPage('channels')">
+
 📢
+
+<span>
+
+کانال‌ها
+
+</span>
+
 </button>
 
 
-<button onclick="show('score')">
+
+<button class="menu-btn"
+onclick="showPage('score')">
+
 🏆
+
+<span>
+
+امتیاز
+
+</span>
+
 </button>
 
 
-<button onclick="show('active')">
+
+<button class="menu-btn"
+onclick="showPage('active')">
+
 ⭐
+
+<span>
+
+عضو فعال
+
+</span>
+
 </button>
 
 
-<button onclick="show('profile')">
+
+<button class="menu-btn"
+onclick="showPage('profile')">
+
 👤
-</button>
 
+<span>
+
+پروفایل
+
+</span>
+
+</button>
 
 </nav>
 
 
 
-
-
-<script>
-
-
-function show(id){
-
-document.querySelectorAll('.page')
-.forEach(x=>x.classList.remove('active'));
-
-document.getElementById(id)
-.classList.add('active');
-
-}
-
-
-
-
-let points=localStorage.getItem("points")||0;
-
-document.getElementById("points").innerHTML=points;
-
-
-
-function addPoint(){
-
-points++;
-
-localStorage.setItem("points",points);
-
-document.getElementById("points").innerHTML=points;
-
-}
-
-
-
-
-function saveUser(){
-
-let n=document.getElementById("name").value;
-
-let p=document.getElementById("phone").value;
-
-
-localStorage.setItem("user",n+" - "+p);
-
-
-document.getElementById("result").innerHTML=
-"ثبت شد: "+n;
-
-}
-
-
-
-</script>
-
+<script src="app.js"></script>
 
 </body>
 
