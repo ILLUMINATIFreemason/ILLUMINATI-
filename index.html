@@ -373,12 +373,26 @@ direction:rtl;
 
 
 /* کارت‌های کانال */
+/* FIX CENTER ALL CONTENT */
 
-#channels .card{
+.card,
+.channel-card,
+.feature,
+.profile-box,
+.score-box,
+.active-box{
 
-display:flex;
+text-align:center !important;
 
-flex-direction:column;
+}
+
+
+.card .icon,
+.channel-card .icon{
+
+display:flex !important;
+
+margin:0 auto !important;
 
 align-items:center;
 
@@ -387,24 +401,37 @@ justify-content:center;
 }
 
 
-/* آیکن پروفایل و بخش‌ها */
+.card a,
+.channel-card a{
 
-.avatar{
+margin-left:auto !important;
 
-margin-left:auto;
-
-margin-right:auto;
+margin-right:auto !important;
 
 }
 
 
-/* منوی پایین */
+#channels{
 
-.bottom{
+text-align:center;
 
-direction:rtl;
+}
 
-  }
+
+#channels .card{
+
+align-items:center !important;
+
+justify-content:center !important;
+
+}
+
+
+h1,h2,h3,p{
+
+text-align:center;
+
+}
 
 
 </style>
