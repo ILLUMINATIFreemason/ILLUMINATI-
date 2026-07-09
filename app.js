@@ -105,7 +105,124 @@ localStorage.setItem("score",score);
 updateScore();
 
 }
+/*=========================================
+ ILLUMINATI v2.1
+ app.js - Part 3
+=========================================*/
 
+
+// ---------- ذخیره کاربر ----------
+
+function saveUser(){
+
+const name =
+document.getElementById("name");
+
+const phone =
+document.getElementById("phone");
+
+
+if(!name || !phone){
+
+return;
+
+}
+
+
+if(name.value.trim()==="" ||
+phone.value.trim()===""){
+
+alert("لطفاً اطلاعات را کامل وارد کنید.");
+
+return;
+
+}
+
+
+
+const user = {
+
+name:name.value,
+
+phone:phone.value,
+
+date:new Date().toLocaleDateString()
+
+};
+
+
+
+localStorage.setItem(
+"illuminatiUser",
+JSON.stringify(user)
+);
+
+
+
+const result =
+document.getElementById("result");
+
+
+if(result){
+
+result.innerText =
+"ثبت شد: " + user.name;
+
+}
+
+
+// بروزرسانی پروفایل
+
+loadUser();
+
+}
+
+
+
+// ---------- نمایش کاربر ----------
+
+function loadUser(){
+
+const data =
+localStorage.getItem("illuminatiUser");
+
+
+if(!data){
+
+return;
+
+}
+
+
+const user =
+JSON.parse(data);
+
+
+
+const profileName =
+document.querySelector("#profile h3");
+
+
+if(profileName){
+
+profileName.innerText =
+user.name;
+
+}
+
+
+const profileText =
+document.querySelector("#profile .glass-card p");
+
+
+if(profileText){
+
+profileText.innerText =
+"شماره موبایل: " + user.phone;
+
+}
+
+}
 // ---------- بارگذاری امتیاز ----------
 
 function loadScore(){
