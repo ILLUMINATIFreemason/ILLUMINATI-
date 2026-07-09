@@ -1113,3 +1113,41 @@ color:#ffd700;
 margin:6px 0;
 line-height:1.8;
 }
+/* ===== صفحه اعضای فعال ===== */
+
+#active .glass-card{
+margin-bottom:20px;
+transition:0.3s ease;
+}
+
+#active .glass-card:hover{
+transform:translateY(-4px);
+}
+
+#active h3{
+margin:0 0 12px;
+font-size:20px;
+font-weight:700;
+}
+
+#active p{
+margin:0;
+line-height:1.8;
+color:#ddd;
+}
+
+#active .glass-card:nth-child(2){
+border:2px solid #FFD700;
+}
+
+#active .glass-card:nth-child(3){
+border:2px solid #C0C0C0;
+}
+
+#active .glass-card:nth-child(4){
+border:2px solid #CD7F32;
+}
+
+#active .glass-card:nth-child(5){
+border:2px solid #00E5FF;
+}
