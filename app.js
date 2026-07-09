@@ -37,7 +37,74 @@ showPage(pageId);
  ILLUMINATI v2.0
  app.js - Part 3
 =========================================*/
+/*=========================================
+ ILLUMINATI v2.1
+ app.js - Part 2
+=========================================*/
 
+// ---------- بروزرسانی امتیاز ----------
+
+function updateScore(){
+
+const scoreText=document.getElementById("userScore");
+const inviteText=document.getElementById("inviteCount");
+const profileScore=document.getElementById("profileScore");
+const profileInvites=document.getElementById("profileInvites");
+const progress=document.querySelector(".progress-fill");
+
+if(scoreText){
+scoreText.innerText=score;
+}
+
+if(inviteText){
+inviteText.innerText=invites;
+}
+
+if(profileScore){
+profileScore.innerText=score;
+}
+
+if(profileInvites){
+profileInvites.innerText=invites;
+}
+
+if(progress){
+
+let percent=Math.min(score,100);
+
+progress.style.width=percent+"%";
+
+}
+
+}
+
+// ---------- افزودن امتیاز ----------
+
+function addScore(amount){
+
+score+=amount;
+
+localStorage.setItem("score",score);
+
+updateScore();
+
+}
+
+// ---------- افزودن دعوت ----------
+
+function addInvite(){
+
+invites++;
+
+score+=10;
+
+localStorage.setItem("invites",invites);
+
+localStorage.setItem("score",score);
+
+updateScore();
+
+}
 
 // ---------- بارگذاری امتیاز ----------
 
