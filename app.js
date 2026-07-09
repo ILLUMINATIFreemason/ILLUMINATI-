@@ -1,4 +1,39 @@
 /*=========================================
+ ILLUMINATI v2.1
+ app.js - Part 1
+=========================================*/
+
+// ---------- متغیرهای اصلی ----------
+
+let score = Number(localStorage.getItem("score")) || 0;
+let invites = Number(localStorage.getItem("invites")) || 0;
+
+// ---------- جابه‌جایی بین صفحات ----------
+
+function showPage(pageId) {
+
+document.querySelectorAll(".page").forEach(function(page) {
+page.classList.remove("active");
+});
+
+const selected = document.getElementById(pageId);
+
+if(selected){
+selected.classList.add("active");
+}
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+// برای سازگاری با نسخه‌های قبلی
+function show(pageId){
+showPage(pageId);
+}
+/*=========================================
  ILLUMINATI v2.0
  app.js - Part 3
 =========================================*/
