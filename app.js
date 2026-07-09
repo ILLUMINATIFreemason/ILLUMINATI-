@@ -578,3 +578,31 @@ checkInvite();
 
 
 });
+// ===== سیستم امتیاز =====
+
+let score = 0;
+let invites = 0;
+
+function updateScore() {
+
+const scoreText = document.getElementById("userScore");
+const inviteText = document.getElementById("inviteCount");
+const progress = document.querySelector(".progress-fill");
+
+if (scoreText) {
+scoreText.textContent = score + " امتیاز";
+}
+
+if (inviteText) {
+inviteText.textContent = invites;
+}
+
+if (progress) {
+let percent = Math.min((score / 100) * 100, 100);
+progress.style.width = percent + "%";
+}
+
+}
+
+// اجرای اولیه
+document.addEventListener("DOMContentLoaded", updateScore);
