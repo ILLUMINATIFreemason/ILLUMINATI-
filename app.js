@@ -1,183 +1,86 @@
 /*=========================================
  ILLUMINATI v2.0
- app.js - Part 1
+ app.js - Part 3
 =========================================*/
 
 
-// ---------- صفحات ----------
+// ---------- بارگذاری امتیاز ----------
 
-const pages = document.querySelectorAll(".page");
+function loadScore(){
 
-const menuButtons = document.querySelectorAll(".menu-btn");
+const data =
+localStorage.getItem("illuminatiUser");
 
 
-
-// ---------- نمایش صفحه ----------
-
-
-
-
-
-// ---------- صفحه اول ----------
-
-document.addEventListener(
-
-"DOMContentLoaded",
-
-function(){
-
-showDefaultPage();
-
-loadUser();
-
-loadScore();
-
-}
-
-);
-
-
-
-
-// ---------- صفحه پیش فرض ----------
-
-function showDefaultPage(){
-
-pages.forEach(function(page){
-
-page.classList.remove("active");
-
-});
-
-
-const homePage =
-document.getElementById("home");
-
-
-if(homePage){
-
-homePage.classList.add("active");
-
-}
-
-
-
-menuButtons.forEach(function(btn){
-
-btn.classList.remove("active");
-
-});
-
-
-if(menuButtons.length>0){
-
-menuButtons[0].classList.add("active");
-
-}
-
-
-}
-
-
-
-// ---------- پیام ----------
-
-function showMessage(text){
-
-alert(text);
-
-}
-/*=========================================
- ILLUMINATI v2.0
- app.js - Part 2
-=========================================*/
-
-
-// ---------- تغییر صفحه ----------
-
-function showPage(pageId, button){
-
-pages.forEach(function(page){
-
-page.classList.remove("active");
-
-});
-
-
-const page = document.getElementById(pageId);
-
-if(page){
-
-page.classList.add("active");
-
-}
-
-
-menuButtons.forEach(function(btn){
-
-btn.classList.remove("active");
-
-});
-
-
-if(button){
-
-button.classList.add("active");
-
-}
-
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-}
-
-
-
-// ---------- ثبت نام ----------
-
-function registerUser(){
-
-const name =
-document.getElementById("userName").value.trim();
-
-const phone =
-document.getElementById("userPhone").value.trim();
-
-if(name===""){
-
-alert("لطفاً نام خود را وارد کنید.");
+if(!data){
 
 return;
 
 }
 
 
-if(phone===""){
+const user = JSON.parse(data);
 
-alert("لطفاً شماره موبایل را وارد کنید.");
+
+const scoreBox =
+document.getElementById("userScore");
+
+
+if(scoreBox){
+
+scoreBox.innerText =
+user.score || 0;
+
+}
+
+}
+
+
+
+// ---------- جایزه روزانه ----------
+
+function dailyReward(){
+
+const data =
+localStorage.getItem("illuminatiUser");
+
+
+if(!data){
+
+alert("ابتدا ثبت نام کنید.");
 
 return;
 
 }
 
 
-const user={
+let user =
+JSON.parse(data);
 
-name:name,
 
-phone:phone,
 
-score:0,
+const today =
+new Date().toDateString();
 
-level:"تازه وارد"
 
-};
+const lastReward =
+localStorage.getItem("lastReward");
+
+
+
+if(lastReward === today){
+
+alert("امروز جایزه خود را دریافت کرده‌اید.");
+
+return;
+
+}
+
+
+
+user.score =
+(user.score || 0) + 10;
+
 
 
 localStorage.setItem(
@@ -189,20 +92,33 @@ JSON.stringify(user)
 );
 
 
+
+localStorage.setItem(
+
+"lastReward",
+
+today
+
+);
+
+
+
+loadScore();
+
 loadUser();
 
-alert("ثبت نام با موفقیت انجام شد.");
+
+alert("🎁 ۱۰ امتیاز به شما اضافه شد.");
 
 }
 
 
 
-// ---------- بارگذاری اطلاعات ----------
+// ---------- افزایش امتیاز دعوت ----------
 
-function loadUser(){
+function addInviteScore(){
 
-const data=
-
+const data =
 localStorage.getItem("illuminatiUser");
 
 
@@ -213,32 +129,165 @@ return;
 }
 
 
-const user=JSON.parse(data);
+let user =
+JSON.parse(data);
 
 
-const info=
 
-document.getElementById("profileInfo");
+user.score =
+(user.score || 0) + 5;
 
 
-if(info){
 
-info.innerHTML=
+localStorage.setItem(
 
-`
-<h3>${user.name}</h3>
+"illuminatiUser",
 
-<p>📱 ${user.phone}</p>
+JSON.stringify(user)
 
-<p>🏆 امتیاز: ${user.score}</p>
+);
 
-<p>⭐ سطح: ${user.level}</p>
 
-`;
+
+loadScore();
+
+loadUser();
+
+}/*=========================================
+ ILLUMINATI v2.0
+ app.js - Part 4 Final
+=========================================*/
+
+
+// ---------- کپی لینک دعوت ----------
+
+function copyInvite(){
+
+const inviteText =
+document.getElementById("inviteText");
+
+
+if(!inviteText){
+
+return;
+
+}
+
+
+const link =
+inviteText.innerText;
+
+
+
+navigator.clipboard.writeText(link)
+
+.then(function(){
+
+alert("🔗 لینک دعوت کپی شد.");
+
+})
+
+.catch(function(){
+
+alert("کپی لینک انجام نشد.");
+
+});
+
+
+}
+
+
+
+
+// ---------- ساخت لینک دعوت کاربر ----------
+
+function createInviteLink(){
+
+const data =
+localStorage.getItem("illuminatiUser");
+
+
+if(!data){
+
+return;
+
+}
+
+
+const user =
+JSON.parse(data);
+
+
+
+const inviteLink =
+window.location.origin +
+"?invite=" +
+encodeURIComponent(user.name);
+
+
+
+const box =
+document.getElementById("inviteText");
+
+
+if(box){
+
+box.innerText =
+inviteLink;
 
 }
 
 }
+
+
+
+
+// ---------- بررسی دعوت ----------
+
+function checkInvite(){
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+
+const inviter =
+params.get("invite");
+
+
+
+if(inviter){
+
+console.log(
+"دعوت شده توسط:",
+inviter
+);
+
+}
+
+}
+
+
+
+
+// ---------- اجرای نهایی ----------
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+
+loadUser();
+
+loadScore();
+
+createInviteLink();
+
+checkInvite();
+
+
+});
 /*=========================================
  ILLUMINATI v2.0
  app.js - Part 3
@@ -394,8 +443,7 @@ loadScore();
 
 loadUser();
 
-}
-/*=========================================
+ }/*=========================================
  ILLUMINATI v2.0
  app.js - Part 4 Final
 =========================================*/
